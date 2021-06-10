@@ -1,3 +1,8 @@
 def solution(numbers): 
-    answer = ' '
-    return answer
+    numbers = list(map(str, numbers))
+    numbers.sort(key=lambda x:x*3, reverse = True )
+    return str(int("".join(numbers)))
+
+print(solution([6, 10, 2]))
+print(solution([221, 2, 10]))
+
