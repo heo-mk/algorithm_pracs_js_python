@@ -3,3 +3,6 @@
 # env파일
 .venv
 .vscode
+
+# 일부 폴더
+/miso_test
