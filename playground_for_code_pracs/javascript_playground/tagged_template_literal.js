@@ -1,23 +1,17 @@
-// const Title = styled.hi`
-//   font-size: 1.5em;
-//   text-align: center;
-//   color: palevioletred;
-// `
+let person = 'lee';
+let age = 28;
 
-const name = 'kim';
-const helloMsg = `hello ${name}`;
-console.log(helloMsg);
+let tag = function(strings, personExp, ageExp) {
+  let str0 = strings[0];
+  let str1 = strings[1];
+  console.log("str0 : " + str0);
+  console.log("str1 : " + str1);
 
-const obj = { 
-  a:1,
-}
-const msg = `${obj}`;
-console.log(msg);
+  let ageStr;
+  if (ageExp > 99) ageStr = 'centenaian';
+  else ageStr = 'youngster';
 
-const foo = () => 1;
-const msg2 = `${foo}`;
-console.log(msg2);
-
-const food1 = '피자';
-const food2 = '치킨';
-
+  return str0 + personExp + str1 + ageStr;
+};
+let output = tag`that ${person} is a ${age}`;
+console.log(output);
