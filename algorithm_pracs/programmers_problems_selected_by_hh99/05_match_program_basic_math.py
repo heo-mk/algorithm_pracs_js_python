@@ -4,18 +4,18 @@ def solution(n, a, b):
     # 작은수/큰수가 홀/짝이면 계산 안됨.
     # 작은수/큰수는 짝/홀이어야 계산 됨.
     # 왜냐면 큰수가 짝수면 몫 계산을 한번 더 해야 한다.  
-    a, b = a + 1, b + 1 
+    a, b = a - 1, b - 1 
 
     # 두 수가 같아질 때까지 각각 2의 몫을 구하는 연산 계속
     while a != b: 
-      count += 1
-      a = a // 2 
-      b = b // 2
+        count += 1
+        a = a // 2 
+        b = b // 2
     return count
 
 # 사실 n은 필요없음.
 
-case1 = solution(8, 1, 2)
+case1 = solution(8, 2, 7)
 print(case1)
 
 # 8 -> 4 -> 2 -> 1 -> 0
